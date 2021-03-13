@@ -1,5 +1,5 @@
 "use strict";
-import app from "../app";
+import app from "../src/app";
 
 describe("testing user endpoint", () => {
   test("testing GET user", async () => {
@@ -7,6 +7,9 @@ describe("testing user endpoint", () => {
     const response = await app().inject({
       method: "GET",
       url: `/user/${userId}`,
+      headers: {
+        authorization: "Bearer xxx",
+      },
     });
     expect(response.statusCode).toBe(200);
     const responseJSON = JSON.parse(response.body);
