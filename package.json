@@ -1,0 +1,39 @@
+{
+  "name": "fastify-typescipt-starter",
+  "version": "0.0.1",
+  "description": "Fastify Typescipt Starter",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --log-error --files ./src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "NODE_ENV=production node dist/server.js",
+    "test": "jest"
+  },
+  "author": "Inian",
+  "license": "ISC",
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^3.14.0",
+    "fastify-autoload": "^3.5.2",
+    "fastify-swagger": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.33",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "json-schema-to-ts": "^1.6.0",
+    "pino-pretty": "^4.7.1",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.3",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.3"
+  }
+}
